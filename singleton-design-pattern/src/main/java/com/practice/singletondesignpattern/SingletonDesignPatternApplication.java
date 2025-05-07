@@ -8,6 +8,7 @@ public class SingletonDesignPatternApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SingletonDesignPatternApplication.class, args);
+        Singleton.getInstance().doSomething();
     }
 
 }
