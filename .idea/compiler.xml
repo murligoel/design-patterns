@@ -6,17 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="factory-design-pattern" />
-        <module name="abstract-factory-design-pattern" />
-        <module name="singleton-design-pattern" />
+        <module name="strategy-design-pattern" />
       </profile>
     </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="abstract-factory-design-pattern" options="-parameters" />
-      <module name="factory-design-pattern" options="-parameters" />
-      <module name="singleton-design-pattern" options="-parameters" />
-    </option>
   </component>
 </project>
