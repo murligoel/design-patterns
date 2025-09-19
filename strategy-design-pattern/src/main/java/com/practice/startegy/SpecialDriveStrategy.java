@@ -1,4 +1,4 @@
-package com.practice;
+package com.practice.startegy;
 
 public class SpecialDriveStrategy implements DriveStrategy {
     @Override

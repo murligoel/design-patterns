@@ -1,4 +1,6 @@
-package com.practice;
+package com.practice.vehicle;
+
+import com.practice.startegy.DriveStrategy;
 
 public class Vehicle {
 
