@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="strategy-design-pattern" />
         <module name="observer-design-pattern" />
+        <module name="practice-design-pattern" />
       </profile>
     </annotationProcessing>
   </component>
