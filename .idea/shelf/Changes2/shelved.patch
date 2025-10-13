@@ -1,0 +1,185 @@
+Index: ../design-patterns/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/factory-design-pattern/src/main/java/com/practice/factorydesignpattern/AbstractFactory.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\n  \"lastFilter\": {\n    \"state\": \"OPEN\",\n    \"assignee\": \"murligoel\"\n  }\n}]]></component>\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\n  \"selectedUrlAndAccountId\": {\n    \"url\": \"https://github.com/murligoel/design-patterns.git\",\n    \"accountId\": \"3bfda529-8593-4339-a0ab-b315a2153426\"\n  }\n}]]></component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"32lfVxEqzeT92wqDcr56hXESOMZ\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.AbstractFactory.executor\": \"Run\",\n    \"Application.FactoryDesignPatternApplication.executor\": \"Run\",\n    \"Application.FactoryMethod.executor\": \"Run\",\n    \"Application.Main (1).executor\": \"Debug\",\n    \"Application.Main (2).executor\": \"Run\",\n    \"Application.Main.executor\": \"Debug\",\n    \"Application.SimpleFactory.executor\": \"Run\",\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"onboarding.tips.debug.path\": \"/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.30375\"\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"Application.AbstractFactory\">\n    <configuration name=\"AbstractFactory\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.factorydesignpattern.AbstractFactory\" />\n      <module name=\"factory-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.factorydesignpattern.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FactoryDesignPatternApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.factorydesignpattern.FactoryDesignPatternApplication\" />\n      <module name=\"factory-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.factorydesignpattern.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FactoryMethod\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.factorydesignpattern.FactoryMethod\" />\n      <module name=\"factory-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.factorydesignpattern.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Main (1)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.Main\" />\n      <module name=\"observer-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.Main\" />\n      <module name=\"practice-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.Main\" />\n      <module name=\"observer-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.observer.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"SimpleFactory\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.factorydesignpattern.SimpleFactory\" />\n      <module name=\"factory-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.factorydesignpattern.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.AbstractFactory\" />\n        <item itemvalue=\"Application.FactoryMethod\" />\n        <item itemvalue=\"Application.SimpleFactory\" />\n        <item itemvalue=\"Application.FactoryDesignPatternApplication\" />\n        <item itemvalue=\"Application.Main (2)\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\" />\n      <created>1758000107146</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1758000107146</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>\n          <line>7</line>\n          <option name=\"timeStamp\" value=\"3\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>\n          <line>8</line>\n          <option name=\"timeStamp\" value=\"4\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\n          <url>file://$PROJECT_DIR$/factory-design-pattern/src/main/java/com/practice/factorydesignpattern/AbstractFactory.java</url>\n          <line>92</line>\n          <properties class=\"com.practice.factorydesignpattern.AbstractFactory\" method=\"main\">\n            <option name=\"EMULATED\" value=\"true\" />\n            <option name=\"WATCH_EXIT\" value=\"false\" />\n          </properties>\n          <option name=\"timeStamp\" value=\"8\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/workspace.xml b/../design-patterns/.idea/workspace.xml
+--- a/../design-patterns/.idea/workspace.xml	(revision ef8276924cb15630f994d229d7c3f22c1df064f9)
++++ b/../design-patterns/.idea/workspace.xml	(date 1760363188415)
+@@ -5,8 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/factory-design-pattern/src/main/java/com/practice/factorydesignpattern/AbstractFactory.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -54,6 +55,7 @@
+     "Application.Main (2).executor": "Run",
+     "Application.Main.executor": "Debug",
+     "Application.SimpleFactory.executor": "Run",
++    "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
+     "ModuleVcsDetector.initialDetectionPerformed": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+@@ -66,7 +68,7 @@
+     "project.structure.side.proportion": "0.30375"
+   }
+ }]]></component>
+-  <component name="RunManager" selected="Application.AbstractFactory">
++  <component name="RunManager" selected="Application.ThreadSafeDoubleLockingSingleton">
+     <configuration name="AbstractFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.AbstractFactory" />
+       <module name="factory-design-pattern" />
+@@ -121,10 +123,10 @@
+     </configuration>
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
+-      <module name="practice-design-pattern" />
++      <module name="observer-design-pattern" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.practice.*" />
++          <option name="PATTERN" value="com.practice.observer.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -132,12 +134,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
+-      <module name="observer-design-pattern" />
++    <configuration name="SimpleFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.SimpleFactory" />
++      <module name="factory-design-pattern" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.practice.observer.*" />
++          <option name="PATTERN" value="com.practice.factorydesignpattern.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -145,12 +147,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="SimpleFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.SimpleFactory" />
+-      <module name="factory-design-pattern" />
++    <configuration name="ThreadSafeDoubleLockingSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.singletondesignpattern.ThreadSafeDoubleLockingSingleton" />
++      <module name="singleton-design-pattern" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.practice.factorydesignpattern.*" />
++          <option name="PATTERN" value="com.practice.singletondesignpattern.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -160,11 +162,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
+         <item itemvalue="Application.AbstractFactory" />
+         <item itemvalue="Application.FactoryMethod" />
+         <item itemvalue="Application.SimpleFactory" />
+         <item itemvalue="Application.FactoryDesignPatternApplication" />
+-        <item itemvalue="Application.Main (2)" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -197,15 +199,6 @@
+           <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>
+           <line>8</line>
+           <option name="timeStamp" value="4" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/factory-design-pattern/src/main/java/com/practice/factorydesignpattern/AbstractFactory.java</url>
+-          <line>92</line>
+-          <properties class="com.practice.factorydesignpattern.AbstractFactory" method="main">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="8" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: ../design-patterns/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"Encoding\">\n    <file url=\"file://$PROJECT_DIR$/observer-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/observer-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/practice-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/practice-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/strategy-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/strategy-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/encodings.xml b/../design-patterns/.idea/encodings.xml
+--- a/../design-patterns/.idea/encodings.xml	(revision ef8276924cb15630f994d229d7c3f22c1df064f9)
++++ b/../design-patterns/.idea/encodings.xml	(date 1760362676147)
+@@ -1,10 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/factory-design-pattern/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/observer-design-pattern/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/observer-design-pattern/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/practice-design-pattern/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/practice-design-pattern/src/main/resources" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/singleton-design-pattern/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/strategy-design-pattern/src/main/java" charset="UTF-8" />
+Index: ../design-patterns/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"CompilerConfiguration\">\n    <annotationProcessing>\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\n        <outputRelativeToContentRoot value=\"true\" />\n        <module name=\"strategy-design-pattern\" />\n        <module name=\"observer-design-pattern\" />\n        <module name=\"practice-design-pattern\" />\n      </profile>\n    </annotationProcessing>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/compiler.xml b/../design-patterns/.idea/compiler.xml
+--- a/../design-patterns/.idea/compiler.xml	(revision ef8276924cb15630f994d229d7c3f22c1df064f9)
++++ b/../design-patterns/.idea/compiler.xml	(date 1760362676146)
+@@ -8,8 +8,16 @@
+         <outputRelativeToContentRoot value="true" />
+         <module name="strategy-design-pattern" />
+         <module name="observer-design-pattern" />
++        <module name="factory-design-pattern" />
+         <module name="practice-design-pattern" />
++        <module name="singleton-design-pattern" />
+       </profile>
+     </annotationProcessing>
+   </component>
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="factory-design-pattern" options="-parameters" />
++      <module name="singleton-design-pattern" options="-parameters" />
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+Index: ../design-patterns/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"MavenProjectsManager\">\n    <option name=\"originalFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_21\" default=\"true\" project-jdk-name=\"homebrew-21\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/misc.xml b/../design-patterns/.idea/misc.xml
+--- a/../design-patterns/.idea/misc.xml	(revision ef8276924cb15630f994d229d7c3f22c1df064f9)
++++ b/../design-patterns/.idea/misc.xml	(date 1760362676145)
+@@ -5,6 +5,8 @@
+     <option name="originalFiles">
+       <list>
+         <option value="$PROJECT_DIR$/pom.xml" />
++        <option value="$PROJECT_DIR$/factory-design-pattern/pom.xml" />
++        <option value="$PROJECT_DIR$/singleton-design-pattern/pom.xml" />
+       </list>
+     </option>
+   </component>
