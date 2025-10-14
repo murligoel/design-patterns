@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/factory-design-pattern/src/main/java/com/practice/factorydesignpattern/AbstractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/decorator-design-pattern/src/main/java/DecoratorPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "murligoel"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;murligoel&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/murligoel/design-patterns.git",
-    "accountId": "3bfda529-8593-4339-a0ab-b315a2153426"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/murligoel/design-patterns.git&quot;,
+    &quot;accountId&quot;: &quot;3bfda529-8593-4339-a0ab-b315a2153426&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -48,12 +49,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.AbstractFactory.executor": "Run",
+    "Application.DecoratorPattern.executor": "Run",
     "Application.FactoryDesignPatternApplication.executor": "Run",
     "Application.FactoryMethod.executor": "Run",
     "Application.Main (1).executor": "Debug",
     "Application.Main (2).executor": "Run",
     "Application.Main.executor": "Debug",
     "Application.SimpleFactory.executor": "Run",
+    "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -66,7 +69,7 @@
     "project.structure.side.proportion": "0.30375"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.AbstractFactory">
+  <component name="RunManager" selected="Application.DecoratorPattern">
     <configuration name="AbstractFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.AbstractFactory" />
       <module name="factory-design-pattern" />
@@ -80,15 +83,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryDesignPatternApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.FactoryDesignPatternApplication" />
-      <module name="factory-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.factorydesignpattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="DecoratorPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DecoratorPattern" />
+      <module name="decorator-design-pattern" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,45 +96,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.practice.factorydesignpattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
-      <module name="observer-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
-      <module name="practice-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
-      <module name="observer-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.observer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,13 +116,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadSafeDoubleLockingSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.singletondesignpattern.ThreadSafeDoubleLockingSingleton" />
+      <module name="singleton-design-pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.singletondesignpattern.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DecoratorPattern" />
+        <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
         <item itemvalue="Application.AbstractFactory" />
         <item itemvalue="Application.FactoryMethod" />
         <item itemvalue="Application.SimpleFactory" />
-        <item itemvalue="Application.FactoryDesignPatternApplication" />
-        <item itemvalue="Application.Main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -197,15 +168,6 @@
           <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>
           <line>8</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/factory-design-pattern/src/main/java/com/practice/factorydesignpattern/AbstractFactory.java</url>
-          <line>92</line>
-          <properties class="com.practice.factorydesignpattern.AbstractFactory" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
