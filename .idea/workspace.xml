@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="" />
+    <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/adapter-design-pattern/src/main/java/AdapterPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +50,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.AbstractFactory.executor": "Run",
+    "Application.AdapterPattern.executor": "Run",
     "Application.DecoratorPattern.executor": "Run",
     "Application.FactoryDesignPatternApplication.executor": "Run",
     "Application.FactoryMethod.executor": "Run",
@@ -64,7 +71,7 @@
     "project.structure.side.proportion": "0.30375"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.DecoratorPattern">
+  <component name="RunManager" selected="Application.AdapterPattern">
     <configuration name="AbstractFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.AbstractFactory" />
       <module name="factory-design-pattern" />
@@ -78,6 +85,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AdapterPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AdapterPattern" />
+      <module name="adapter-design-pattern" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DecoratorPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DecoratorPattern" />
       <module name="decorator-design-pattern" />
@@ -87,19 +101,6 @@
     </configuration>
     <configuration name="FactoryMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.FactoryMethod" />
-      <module name="factory-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.factorydesignpattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.SimpleFactory" />
       <module name="factory-design-pattern" />
       <extension name="coverage">
         <pattern>
@@ -126,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AdapterPattern" />
         <item itemvalue="Application.DecoratorPattern" />
         <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
         <item itemvalue="Application.AbstractFactory" />
         <item itemvalue="Application.FactoryMethod" />
-        <item itemvalue="Application.SimpleFactory" />
       </list>
     </recent_temporary>
   </component>
