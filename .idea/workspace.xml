@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/learning-streams/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +65,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.30375&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.AdapterPattern">
+  <component name="RunManager" selected="Application.VirtualProxy">
     <configuration name="AbstractFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.AbstractFactory" />
       <module name="factory-design-pattern" />
@@ -99,19 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.factorydesignpattern.FactoryMethod" />
-      <module name="factory-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.factorydesignpattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ThreadSafeDoubleLockingSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.singletondesignpattern.ThreadSafeDoubleLockingSingleton" />
       <module name="singleton-design-pattern" />
@@ -125,13 +106,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VirtualProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VirtualProxy" />
+      <module name="proxy-design-pattern" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VirtualProxy" />
         <item itemvalue="Application.AdapterPattern" />
         <item itemvalue="Application.DecoratorPattern" />
         <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
         <item itemvalue="Application.AbstractFactory" />
-        <item itemvalue="Application.FactoryMethod" />
       </list>
     </recent_temporary>
   </component>

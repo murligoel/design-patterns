@@ -7,15 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="adapter-design-pattern" />
+        <module name="proxy-design-pattern" />
         <module name="decorator-design-pattern" />
-        <module name="learning-streams" />
         <module name="strategy-design-pattern" />
         <module name="observer-design-pattern" />
+        <module name="factory-design-pattern" />
         <module name="practice-design-pattern" />
+        <module name="learning-streams" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="factory-design-pattern" target="17" />
       <module name="singleton-design-pattern" target="17" />
     </bytecodeTargetLevel>
   </component>
