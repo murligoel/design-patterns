@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="adapter-design-pattern" />
         <module name="decorator-design-pattern" />
+        <module name="learning-streams" />
         <module name="strategy-design-pattern" />
         <module name="observer-design-pattern" />
         <module name="practice-design-pattern" />
