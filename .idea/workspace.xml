@@ -69,7 +69,7 @@
     "project.structure.side.proportion": "0.30375"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ProtectionProxy">
+  <component name="RunManager" selected="Application.RemoteProxy">
     <configuration name="AdapterPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AdapterPattern" />
       <module name="adapter-design-pattern" />
@@ -91,15 +91,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadSafeDoubleLockingSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.singletondesignpattern.ThreadSafeDoubleLockingSingleton" />
-      <module name="singleton-design-pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.singletondesignpattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="RemoteProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RemoteProxy" />
+      <module name="proxy-design-pattern" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RemoteProxy" />
         <item itemvalue="Application.ProtectionProxy" />
         <item itemvalue="Application.VirtualProxy" />
         <item itemvalue="Application.AdapterPattern" />
         <item itemvalue="Application.DecoratorPattern" />
-        <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
       </list>
     </recent_temporary>
   </component>
