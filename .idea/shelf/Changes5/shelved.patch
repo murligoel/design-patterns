@@ -1,0 +1,749 @@
+Index: ../design-patterns/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/proxy-design-pattern/src/main/java/ProtectionProxy.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;murligoel&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/murligoel/design-patterns.git&quot;,\n    &quot;accountId&quot;: &quot;3bfda529-8593-4339-a0ab-b315a2153426&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"32lfVxEqzeT92wqDcr56hXESOMZ\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.AbstractFactory.executor\": \"Run\",\n    \"Application.AdapterPattern.executor\": \"Run\",\n    \"Application.DecoratorPattern.executor\": \"Run\",\n    \"Application.FactoryDesignPatternApplication.executor\": \"Run\",\n    \"Application.FactoryMethod.executor\": \"Run\",\n    \"Application.Main (1).executor\": \"Debug\",\n    \"Application.Main (2).executor\": \"Run\",\n    \"Application.Main.executor\": \"Debug\",\n    \"Application.ProtectionProxy.executor\": \"Run\",\n    \"Application.SimpleFactory.executor\": \"Run\",\n    \"Application.ThreadSafeDoubleLockingSingleton.executor\": \"Run\",\n    \"Application.VirtualProxy.executor\": \"Run\",\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"onboarding.tips.debug.path\": \"/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.30375\"\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"Application.RemoteProxy\">\n    <configuration name=\"AdapterPattern\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"AdapterPattern\" />\n      <module name=\"adapter-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DecoratorPattern\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"DecoratorPattern\" />\n      <module name=\"decorator-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ProtectionProxy\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"ProtectionProxy\" />\n      <module name=\"proxy-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"RemoteProxy\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"RemoteProxy\" />\n      <module name=\"proxy-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"VirtualProxy\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"VirtualProxy\" />\n      <module name=\"proxy-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.RemoteProxy\" />\n        <item itemvalue=\"Application.ProtectionProxy\" />\n        <item itemvalue=\"Application.VirtualProxy\" />\n        <item itemvalue=\"Application.AdapterPattern\" />\n        <item itemvalue=\"Application.DecoratorPattern\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\" />\n      <created>1758000107146</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1758000107146</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>\n          <line>7</line>\n          <option name=\"timeStamp\" value=\"3\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>\n          <line>8</line>\n          <option name=\"timeStamp\" value=\"4\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/workspace.xml b/../design-patterns/.idea/workspace.xml
+--- a/../design-patterns/.idea/workspace.xml	(revision 89542890bf2420be34bd3a46e15ff0bb973b2692)
++++ b/../design-patterns/.idea/workspace.xml	(date 1761587564101)
+@@ -5,7 +5,21 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/proxy-design-pattern/src/main/java/ProtectionProxy.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/TomatoApp.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/Cart.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/MenuItem.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/Order.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/Restaurant.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/User.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/strategies/CreditCardPaymentStrategy.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/strategies/PaymentStrategy.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/strategies/UpiPaymentStrategy.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/AP.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -43,36 +57,46 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.AbstractFactory.executor": "Run",
+-    "Application.AdapterPattern.executor": "Run",
+-    "Application.DecoratorPattern.executor": "Run",
+-    "Application.FactoryDesignPatternApplication.executor": "Run",
+-    "Application.FactoryMethod.executor": "Run",
+-    "Application.Main (1).executor": "Debug",
+-    "Application.Main (2).executor": "Run",
+-    "Application.Main.executor": "Debug",
+-    "Application.ProtectionProxy.executor": "Run",
+-    "Application.SimpleFactory.executor": "Run",
+-    "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
+-    "Application.VirtualProxy.executor": "Run",
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "onboarding.tips.debug.path": "/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.30375"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.AP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.AbstractFactory.executor&quot;: &quot;Run&quot;,
++    &quot;Application.AdapterPattern.executor&quot;: &quot;Run&quot;,
++    &quot;Application.DecoratorPattern.executor&quot;: &quot;Run&quot;,
++    &quot;Application.FactoryDesignPatternApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Application.FactoryMethod.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main (1).executor&quot;: &quot;Debug&quot;,
++    &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;Application.PP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ProtectionProxy.executor&quot;: &quot;Run&quot;,
++    &quot;Application.RemoteProxy.executor&quot;: &quot;Run&quot;,
++    &quot;Application.SimpleFactory.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ThreadSafeDoubleLockingSingleton.executor&quot;: &quot;Run&quot;,
++    &quot;Application.VP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.VirtualProxy.executor&quot;: &quot;Run&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.30375&quot;
+   }
+-}]]></component>
+-  <component name="RunManager" selected="Application.RemoteProxy">
+-    <configuration name="AdapterPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="AdapterPattern" />
+-      <module name="adapter-design-pattern" />
++}</component>
++  <component name="RunManager" selected="Application.AP">
++    <configuration name="AP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.AP" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -84,33 +108,51 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ProtectionProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="ProtectionProxy" />
+-      <module name="proxy-design-pattern" />
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="RemoteProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="RemoteProxy" />
+-      <module name="proxy-design-pattern" />
++    <configuration name="PP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.PP" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="VirtualProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="VirtualProxy" />
+-      <module name="proxy-design-pattern" />
++    <configuration name="VP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.VP" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.RemoteProxy" />
+-        <item itemvalue="Application.ProtectionProxy" />
+-        <item itemvalue="Application.VirtualProxy" />
+-        <item itemvalue="Application.AdapterPattern" />
++        <item itemvalue="Application.AP" />
++        <item itemvalue="Application.PP" />
++        <item itemvalue="Application.VP" />
++        <item itemvalue="Application.Main" />
+         <item itemvalue="Application.DecoratorPattern" />
+       </list>
+     </recent_temporary>
+@@ -132,20 +174,4 @@
+     </task>
+     <servers />
+   </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>
+-          <line>7</line>
+-          <option name="timeStamp" value="3" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>
+-          <line>8</line>
+-          <option name="timeStamp" value="4" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: ../design-patterns/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"Encoding\">\n    <file url=\"file://$PROJECT_DIR$/adapter-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/adapter-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/decorator-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/decorator-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/factory-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/learning-streams/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/learning-streams/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/observer-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/observer-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/practice-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/practice-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/proxy-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/proxy-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/singleton-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/strategy-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/strategy-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/encodings.xml b/../design-patterns/.idea/encodings.xml
+--- a/../design-patterns/.idea/encodings.xml	(revision 89542890bf2420be34bd3a46e15ff0bb973b2692)
++++ b/../design-patterns/.idea/encodings.xml	(date 1761587564104)
+@@ -1,6 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/Tomato/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/Tomato/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/adapter-design-pattern/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/adapter-design-pattern/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/decorator-design-pattern/src/main/java" charset="UTF-8" />
+Index: ../design-patterns/Tomato/src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/Main.java b/../design-patterns/Tomato/src/main/java/Main.java
+new file mode 100644
+--- /dev/null	(date 1761586289282)
++++ b/../design-patterns/Tomato/src/main/java/Main.java	(date 1761586289282)
+@@ -0,0 +1,2 @@
++public class Main {
++}
+Index: ../design-patterns/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"CompilerConfiguration\">\n    <annotationProcessing>\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\n        <outputRelativeToContentRoot value=\"true\" />\n        <module name=\"adapter-design-pattern\" />\n        <module name=\"proxy-design-pattern\" />\n        <module name=\"decorator-design-pattern\" />\n        <module name=\"strategy-design-pattern\" />\n        <module name=\"observer-design-pattern\" />\n        <module name=\"factory-design-pattern\" />\n        <module name=\"practice-design-pattern\" />\n        <module name=\"learning-streams\" />\n      </profile>\n    </annotationProcessing>\n    <bytecodeTargetLevel>\n      <module name=\"singleton-design-pattern\" target=\"17\" />\n    </bytecodeTargetLevel>\n  </component>\n  <component name=\"JavacSettings\">\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\n      <module name=\"factory-design-pattern\" options=\"-parameters\" />\n      <module name=\"singleton-design-pattern\" options=\"-parameters\" />\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/compiler.xml b/../design-patterns/.idea/compiler.xml
+--- a/../design-patterns/.idea/compiler.xml	(revision 89542890bf2420be34bd3a46e15ff0bb973b2692)
++++ b/../design-patterns/.idea/compiler.xml	(date 1761587564101)
+@@ -14,6 +14,7 @@
+         <module name="factory-design-pattern" />
+         <module name="practice-design-pattern" />
+         <module name="learning-streams" />
++        <module name="Tomato" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel>
+Index: ../design-patterns/Tomato/src/main/java/TomatoApp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/TomatoApp.java b/../design-patterns/Tomato/src/main/java/TomatoApp.java
+new file mode 100644
+--- /dev/null	(date 1761586289289)
++++ b/../design-patterns/Tomato/src/main/java/TomatoApp.java	(date 1761586289289)
+@@ -0,0 +1,2 @@
++public class TomatoApp {
++}
+Index: ../design-patterns/Tomato/src/main/java/models/MenuItem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/MenuItem.java b/../design-patterns/Tomato/src/main/java/models/MenuItem.java
+new file mode 100644
+--- /dev/null	(date 1761586595516)
++++ b/../design-patterns/Tomato/src/main/java/models/MenuItem.java	(date 1761586595516)
+@@ -0,0 +1,42 @@
++package models;
++
++public class MenuItem {
++
++    private String code;
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getCode() {
++        return code;
++    }
++
++    public void setCode(String code) {
++        this.code = code;
++    }
++
++    public String getPrice() {
++        return price;
++    }
++
++    public void setPrice(String price) {
++        this.price = price;
++    }
++
++    private String name;
++    private String price;
++
++    public MenuItem(String code, String name, String price) {
++        this.code = code;
++        this.name = name;
++        this.price = price;
++    }
++
++
++
++}
+Index: ../design-patterns/Tomato/src/main/java/models/Restaurant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/Restaurant.java b/../design-patterns/Tomato/src/main/java/models/Restaurant.java
+new file mode 100644
+--- /dev/null	(date 1761586697841)
++++ b/../design-patterns/Tomato/src/main/java/models/Restaurant.java	(date 1761586697841)
+@@ -0,0 +1,44 @@
++package models;
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class Restaurant {
++    private static int nextRestaurantId = 0;
++    private int restaurantId;
++    private String name;
++
++    public String getLocation() {
++        return location;
++    }
++
++    public void setLocation(String location) {
++        this.location = location;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    private String location;
++    private List<MenuItem> menu = new ArrayList<>();
++
++    public Restaurant(String name, String location) {
++        this.name = name;
++        this.location = location;
++        this.restaurantId = nextRestaurantId++;
++    }
++
++    public void addMenuItem(MenuItem menuItem) {
++        menu.add(menuItem);
++    }
++
++    public List<MenuItem> getMenuItems() {
++        return menu;
++    }
++
++}
+\ No newline at end of file
+Index: ../design-patterns/Tomato/src/main/java/models/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/User.java b/../design-patterns/Tomato/src/main/java/models/User.java
+new file mode 100644
+--- /dev/null	(date 1761586813581)
++++ b/../design-patterns/Tomato/src/main/java/models/User.java	(date 1761586813581)
+@@ -0,0 +1,43 @@
++package models;
++
++public class User {
++    private int userId;
++    private String name;
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public int getUserId() {
++        return userId;
++    }
++
++    public void setUserId(int userId) {
++        this.userId = userId;
++    }
++
++    private String address;
++    private Cart cart;
++
++    public User(int userId, String name, String address) {
++        this.userId = userId;
++        this.name = name;
++        this.address = address;
++    }
++
++    public Cart getCart() {
++        return cart;
++    }
++}
+Index: ../design-patterns/Tomato/src/main/java/models/Order.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/Order.java b/../design-patterns/Tomato/src/main/java/models/Order.java
+new file mode 100644
+--- /dev/null	(date 1761587475183)
++++ b/../design-patterns/Tomato/src/main/java/models/Order.java	(date 1761587475183)
+@@ -0,0 +1,92 @@
++package models;
++
++import models.strategies.PaymentStrategy;
++
++import java.util.List;
++
++public abstract class Order {
++    private static int nextOrderId = 0;
++
++    protected int orderId;
++    protected User user;
++    protected Restaurant restaurant;
++    protected List<MenuItem> items;
++    protected PaymentStrategy paymentStrategy;
++    protected double total;
++    protected String scheduled;
++
++    public Order() {
++        this.user = null;
++        this.restaurant = null;
++        this.paymentStrategy = null;
++        this.total = 0.0;
++        this.scheduled = "";
++        this.orderId = ++nextOrderId;
++    }
++
++    public boolean processPayment() {
++        if(paymentStrategy != null) {
++            paymentStrategy.pay(total);
++            return true;
++        } else {
++            System.out.println("Please choose a payment mode first");
++            return false;
++        }
++    }
++
++
++    public abstract String getType();
++
++    // Getters and Setters
++    public int getOrderId() {
++        return orderId;
++    }
++
++    public void setUser(User u) {
++        user = u;
++    }
++
++    public User getUser() {
++        return user;
++    }
++
++    public void setRestaurant(Restaurant r) {
++        restaurant = r;
++    }
++
++    public Restaurant getRestaurant() {
++        return restaurant;
++    }
++
++    public void setItems(List<MenuItem> its) {
++        items = its;
++        total = 0;
++        for (MenuItem i : items) {
++            total += Double.parseDouble(i.getPrice());
++        }
++    }
++
++    public List<MenuItem> getItems() {
++        return items;
++    }
++
++    public void setPaymentStrategy(PaymentStrategy p) {
++        paymentStrategy = p;
++    }
++
++    public void setScheduled(String s) {
++        scheduled = s;
++    }
++
++    public String getScheduled() {
++        return scheduled;
++    }
++
++    public double getTotal() {
++        return total;
++    }
++
++    public void setTotal(double total) {
++        this.total = total;
++    }
++}
+Index: ../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java b/../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java
+new file mode 100644
+--- /dev/null	(date 1761550898114)
++++ b/../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java	(date 1761550898114)
+@@ -0,0 +1,51 @@
++package com.practice;
++
++interface IReports {
++    public String getJsonData(String data);
++}
++
++class XDP {
++
++    public String getXmlData(String xmlData) {
++       int idx = xmlData.indexOf(":");
++       String name = xmlData.substring(0, idx);
++       String id = xmlData.substring(idx+1);
++       return "<user>" +
++               "<name>" + name + "</name>" +
++               "<id>" + id + "</id>" +
++               "</user>";
++    }
++}
++
++class XDPAdapter implements IReports {
++
++    XDP xdp;
++
++    public XDPAdapter(XDP xdp) {
++        this.xdp = xdp;
++    }
++
++    @Override
++    public String getJsonData(String data) {
++        String xmlData = xdp.getXmlData(data);
++        System.out.println("Generating json from xml data "+xmlData);
++        return xmlData;
++    }
++}
++
++class Client {
++
++    public void getReport(IReports reports, String rawData) {
++        System.out.printf(reports.getJsonData(rawData));
++    }
++}
++public class AP {
++
++    public static void main(String[] args) {
++        XDP xdp = new XDP();
++        IReports reports = new XDPAdapter(xdp);
++
++        Client client = new Client();
++        client.getReport(reports, "Alice:10");
++    }
++}
+Index: ../design-patterns/Tomato/src/main/java/models/Cart.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/Cart.java b/../design-patterns/Tomato/src/main/java/models/Cart.java
+new file mode 100644
+--- /dev/null	(date 1761587020560)
++++ b/../design-patterns/Tomato/src/main/java/models/Cart.java	(date 1761587020560)
+@@ -0,0 +1,45 @@
++package models;
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class Cart {
++    private Restaurant restaurant;
++    private List<MenuItem> items = new ArrayList<>();
++
++    public Cart() {
++        restaurant = null;
++    }
++
++    public void addItem(MenuItem menuItem) {
++        if(restaurant == null) {
++            System.err.println("Cart: Set a restaurant before adding items.");
++            return;
++        }
++        items.add(menuItem);
++    }
++
++    public void getTotalCOst() {
++        double sum = 0.0;
++        for(MenuItem menuItem : items) {
++            sum += Double.parseDouble(menuItem.getPrice());
++        }
++    }
++
++    public void clearCart() {
++        items.clear();
++        restaurant = null;
++    }
++
++    public void setRestaurant(Restaurant restaurant) {
++        this.restaurant = restaurant;
++    }
++
++    public Restaurant getRestaurant() {
++        return restaurant;
++    }
++
++    public List<MenuItem> getItems() {
++        return items;
++    }
++}
+Index: ../design-patterns/Tomato/src/main/java/models/strategies/PaymentStrategy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/strategies/PaymentStrategy.java b/../design-patterns/Tomato/src/main/java/models/strategies/PaymentStrategy.java
+new file mode 100644
+--- /dev/null	(date 1761587352969)
++++ b/../design-patterns/Tomato/src/main/java/models/strategies/PaymentStrategy.java	(date 1761587352969)
+@@ -0,0 +1,6 @@
++package models.strategies;
++
++public interface PaymentStrategy {
++
++    void pay(double price);
++}
+Index: ../design-patterns/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n\n    <groupId>com.practice</groupId>\n    <artifactId>Design-Patterns</artifactId>\n    <version>1.0-SNAPSHOT</version>\n    <packaging>pom</packaging>\n    <modules>\n        <module>strategy-design-pattern</module>\n        <module>observer-design-pattern</module>\n        <module>practice-design-pattern</module>\n        <module>decorator-design-pattern</module>\n        <module>adapter-design-pattern</module>\n        <module>learning-streams</module>\n        <module>proxy-design-pattern</module>\n    </modules>\n\n    <properties>\n        <maven.compiler.source>21</maven.compiler.source>\n        <maven.compiler.target>21</maven.compiler.target>\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n    </properties>\n\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/pom.xml b/../design-patterns/pom.xml
+--- a/../design-patterns/pom.xml	(revision 89542890bf2420be34bd3a46e15ff0bb973b2692)
++++ b/../design-patterns/pom.xml	(date 1761586258019)
+@@ -16,6 +16,7 @@
+         <module>adapter-design-pattern</module>
+         <module>learning-streams</module>
+         <module>proxy-design-pattern</module>
++        <module>Tomato</module>
+     </modules>
+ 
+     <properties>
+Index: ../design-patterns/Tomato/src/main/java/models/strategies/CreditCardPaymentStrategy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/strategies/CreditCardPaymentStrategy.java b/../design-patterns/Tomato/src/main/java/models/strategies/CreditCardPaymentStrategy.java
+new file mode 100644
+--- /dev/null	(date 1761587437049)
++++ b/../design-patterns/Tomato/src/main/java/models/strategies/CreditCardPaymentStrategy.java	(date 1761587437049)
+@@ -0,0 +1,15 @@
++package models.strategies;
++
++public class CreditCardPaymentStrategy implements PaymentStrategy {
++
++    private String cardNumber;
++
++    public CreditCardPaymentStrategy(String cardNumber) {
++        this.cardNumber = cardNumber;
++    }
++
++    @Override
++    public void pay(double price) {
++        System.out.println("Paying " + price + " to card " + cardNumber);
++    }
++}
+Index: ../design-patterns/Tomato/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/pom.xml b/../design-patterns/Tomato/pom.xml
+new file mode 100644
+--- /dev/null	(date 1761586257973)
++++ b/../design-patterns/Tomato/pom.xml	(date 1761586257973)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <parent>
++        <groupId>com.practice</groupId>
++        <artifactId>Design-Patterns</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++
++    <artifactId>Tomato</artifactId>
++
++    <properties>
++        <maven.compiler.source>21</maven.compiler.source>
++        <maven.compiler.target>21</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: ../design-patterns/Tomato/src/main/java/models/strategies/UpiPaymentStrategy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/Tomato/src/main/java/models/strategies/UpiPaymentStrategy.java b/../design-patterns/Tomato/src/main/java/models/strategies/UpiPaymentStrategy.java
+new file mode 100644
+--- /dev/null	(date 1761587556089)
++++ b/../design-patterns/Tomato/src/main/java/models/strategies/UpiPaymentStrategy.java	(date 1761587556089)
+@@ -0,0 +1,14 @@
++package models.strategies;
++
++public class UpiPaymentStrategy implements PaymentStrategy {
++
++    private String mobile;
++
++    public  UpiPaymentStrategy(String mobile) {
++        this.mobile = mobile;
++    }
++    @Override
++    public void pay(double price) {
++        System.out.println("Paying " + price + " using mobile " + mobile);
++    }
++}

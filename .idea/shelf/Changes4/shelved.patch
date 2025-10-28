@@ -1,0 +1,253 @@
+Index: ../design-patterns/practice-design-pattern/src/main/java/com/practice/VP.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/practice-design-pattern/src/main/java/com/practice/VP.java b/../design-patterns/practice-design-pattern/src/main/java/com/practice/VP.java
+new file mode 100644
+--- /dev/null	(date 1761478857641)
++++ b/../design-patterns/practice-design-pattern/src/main/java/com/practice/VP.java	(date 1761478857641)
+@@ -0,0 +1,40 @@
++package com.practice;
++
++interface IImage {
++    void display();
++}
++
++class RealImage implements IImage {
++    private String fileName;
++    public RealImage(String fileName) {
++        this.fileName = fileName;
++    }
++
++    @Override
++    public void display() {
++        System.out.println(fileName);
++    }
++}
++
++class VProxy implements IImage {
++    private RealImage realImage;
++    private String fileName;
++    public VProxy(String fileName) {
++        this.fileName = fileName;
++        this.realImage = null;
++    }
++    @Override
++    public void display() {
++        if(this.realImage == null) {
++            this.realImage = new RealImage(fileName);
++        }
++        realImage.display();
++    }
++}
++public class VP {
++
++    public static void main(String[] args) {
++        IImage image = new VProxy("VP-murli");
++        image.display();
++    }
++}
+Index: ../design-patterns/practice-design-pattern/src/main/java/com/practice/PP.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/practice-design-pattern/src/main/java/com/practice/PP.java b/../design-patterns/practice-design-pattern/src/main/java/com/practice/PP.java
+new file mode 100644
+--- /dev/null	(date 1761478880222)
++++ b/../design-patterns/practice-design-pattern/src/main/java/com/practice/PP.java	(date 1761478880222)
+@@ -0,0 +1,54 @@
++package com.practice;
++
++interface IDR {
++    public void unlockPdf(String fileName, String password);
++}
++
++class RealDocumentReader implements IDR {
++
++    @Override
++    public void unlockPdf(String fileName, String password) {
++        System.out.println("Unlocking file " + fileName);
++    }
++}
++
++class User {
++    public String username;
++    public boolean isPremium;
++
++    public User(String username, boolean isPremium) {
++        this.username = username;
++        this.isPremium = isPremium;
++    }
++}
++
++class DocumentProxy implements IDR {
++    private RealDocumentReader realDocumentReader;
++    private User user;
++    public DocumentProxy( User user) {
++        this.realDocumentReader = new RealDocumentReader();
++        this.user = user;
++    }
++
++    @Override
++    public void unlockPdf(String fileName, String password) {
++       if(user.isPremium) {
++           realDocumentReader.unlockPdf(fileName, password);
++           return;
++       }
++       System.out.println("User is not premium");
++    }
++}
++public class PP {
++
++    public static void main(String[] args) {
++        User user = new User("VP-murli", false);
++        User user2 = new User("VP-murli-jqjh", true);
++
++        IDR realDocumentReader = new DocumentProxy(user);
++        realDocumentReader.unlockPdf("file.txt", "password");
++
++        realDocumentReader = new DocumentProxy(user2);
++        realDocumentReader.unlockPdf("file2.txt", "password");
++    }
++}
+Index: ../design-patterns/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/proxy-design-pattern/src/main/java/ProtectionProxy.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;murligoel&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/murligoel/design-patterns.git&quot;,\n    &quot;accountId&quot;: &quot;3bfda529-8593-4339-a0ab-b315a2153426&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"32lfVxEqzeT92wqDcr56hXESOMZ\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.AbstractFactory.executor\": \"Run\",\n    \"Application.AdapterPattern.executor\": \"Run\",\n    \"Application.DecoratorPattern.executor\": \"Run\",\n    \"Application.FactoryDesignPatternApplication.executor\": \"Run\",\n    \"Application.FactoryMethod.executor\": \"Run\",\n    \"Application.Main (1).executor\": \"Debug\",\n    \"Application.Main (2).executor\": \"Run\",\n    \"Application.Main.executor\": \"Debug\",\n    \"Application.ProtectionProxy.executor\": \"Run\",\n    \"Application.SimpleFactory.executor\": \"Run\",\n    \"Application.ThreadSafeDoubleLockingSingleton.executor\": \"Run\",\n    \"Application.VirtualProxy.executor\": \"Run\",\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"onboarding.tips.debug.path\": \"/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.30375\"\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"Application.RemoteProxy\">\n    <configuration name=\"AdapterPattern\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"AdapterPattern\" />\n      <module name=\"adapter-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DecoratorPattern\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"DecoratorPattern\" />\n      <module name=\"decorator-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ProtectionProxy\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"ProtectionProxy\" />\n      <module name=\"proxy-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"RemoteProxy\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"RemoteProxy\" />\n      <module name=\"proxy-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"VirtualProxy\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"VirtualProxy\" />\n      <module name=\"proxy-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.RemoteProxy\" />\n        <item itemvalue=\"Application.ProtectionProxy\" />\n        <item itemvalue=\"Application.VirtualProxy\" />\n        <item itemvalue=\"Application.AdapterPattern\" />\n        <item itemvalue=\"Application.DecoratorPattern\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\" />\n      <created>1758000107146</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1758000107146</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>\n          <line>7</line>\n          <option name=\"timeStamp\" value=\"3\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>\n          <line>8</line>\n          <option name=\"timeStamp\" value=\"4\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/workspace.xml b/../design-patterns/.idea/workspace.xml
+--- a/../design-patterns/.idea/workspace.xml	(revision 89542890bf2420be34bd3a46e15ff0bb973b2692)
++++ b/../design-patterns/.idea/workspace.xml	(date 1761478857697)
+@@ -5,7 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/proxy-design-pattern/src/main/java/ProtectionProxy.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/PP.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/VP.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -52,10 +54,13 @@
+     "Application.FactoryMethod.executor": "Run",
+     "Application.Main (1).executor": "Debug",
+     "Application.Main (2).executor": "Run",
+-    "Application.Main.executor": "Debug",
++    "Application.Main.executor": "Run",
++    "Application.PP.executor": "Run",
+     "Application.ProtectionProxy.executor": "Run",
++    "Application.RemoteProxy.executor": "Run",
+     "Application.SimpleFactory.executor": "Run",
+     "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
++    "Application.VP.executor": "Run",
+     "Application.VirtualProxy.executor": "Run",
+     "ModuleVcsDetector.initialDetectionPerformed": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+@@ -69,24 +74,36 @@
+     "project.structure.side.proportion": "0.30375"
+   }
+ }]]></component>
+-  <component name="RunManager" selected="Application.RemoteProxy">
+-    <configuration name="AdapterPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="AdapterPattern" />
+-      <module name="adapter-design-pattern" />
++  <component name="RunManager" selected="Application.PP">
++    <configuration name="DecoratorPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="DecoratorPattern" />
++      <module name="decorator-design-pattern" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="DecoratorPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="DecoratorPattern" />
+-      <module name="decorator-design-pattern" />
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.Main" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="ProtectionProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="ProtectionProxy" />
+-      <module name="proxy-design-pattern" />
++    <configuration name="PP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.PP" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -98,20 +115,26 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="VirtualProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="VirtualProxy" />
+-      <module name="proxy-design-pattern" />
++    <configuration name="VP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.practice.VP" />
++      <module name="practice-design-pattern" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.practice.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.PP" />
++        <item itemvalue="Application.VP" />
++        <item itemvalue="Application.Main" />
++        <item itemvalue="Application.DecoratorPattern" />
+         <item itemvalue="Application.RemoteProxy" />
+-        <item itemvalue="Application.ProtectionProxy" />
+-        <item itemvalue="Application.VirtualProxy" />
+-        <item itemvalue="Application.AdapterPattern" />
+-        <item itemvalue="Application.DecoratorPattern" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -132,20 +155,4 @@
+     </task>
+     <servers />
+   </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>
+-          <line>7</line>
+-          <option name="timeStamp" value="3" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/practice-design-pattern/src/main/java/com/practice/Main.java</url>
+-          <line>8</line>
+-          <option name="timeStamp" value="4" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-  </component>
+ </project>
+\ No newline at end of file
