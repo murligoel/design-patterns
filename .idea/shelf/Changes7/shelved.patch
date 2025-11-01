@@ -1,0 +1,51 @@
+Index: ../design-patterns/decorator-design-pattern/src/main/java/DP.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/decorator-design-pattern/src/main/java/DP.java b/../design-patterns/decorator-design-pattern/src/main/java/DP.java
+new file mode 100644
+--- /dev/null	(date 1761830001107)
++++ b/../design-patterns/decorator-design-pattern/src/main/java/DP.java	(date 1761830001107)
+@@ -0,0 +1,41 @@
++interface character {
++    String getAbilities();
++}
++
++class mario implements character {
++    @Override
++    public String getAbilities() {
++        return "Mario";
++    }
++}
++
++abstract class CD implements character {
++   protected character c;
++
++   public CD(character c) {
++       this.c = c;
++   }
++}
++
++class HU extends CD {
++    CD cd;
++    public HU(character character) {
++       super(character);
++    }
++
++    @Override
++    public String getAbilities() {
++        return c.getAbilities() + " with heightUp";
++    }
++}
++public class DP {
++
++    public static void main(String[] args) {
++
++        character mario = new mario();
++
++        mario = new HU(mario);
++
++        System.out.println(mario.getAbilities());
++    }
++}

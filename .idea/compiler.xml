@@ -14,12 +14,12 @@
         <module name="factory-design-pattern" />
         <module name="practice-design-pattern" />
         <module name="learning-streams" />
+        <module name="Tomato" />
         <module name="chain-of-responsibility" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="singleton-design-pattern" target="17" />
-      <module name="Tomato" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

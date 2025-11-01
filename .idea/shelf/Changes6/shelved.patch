@@ -1,0 +1,61 @@
+Index: ../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java b/../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java
+new file mode 100644
+--- /dev/null	(date 1761811806929)
++++ b/../design-patterns/practice-design-pattern/src/main/java/com/practice/AP.java	(date 1761811806929)
+@@ -0,0 +1,51 @@
++package com.practice;
++
++interface IReports {
++    public String getJsonData(String data);
++}
++
++class XDP {
++
++    public String getXmlData(String xmlData) {
++       int idx = xmlData.indexOf(":");
++       String name = xmlData.substring(0, idx);
++       String id = xmlData.substring(idx+1);
++       return "<user>" +
++               "<name>" + name + "</name>" +
++               "<id>" + id + "</id>" +
++               "</user>";
++    }
++}
++
++class XDPAdapter implements IReports {
++
++    XDP xdp;
++
++    public XDPAdapter(XDP xdp) {
++        this.xdp = xdp;
++    }
++
++    @Override
++    public String getJsonData(String data) {
++        String xmlData = xdp.getXmlData(data);
++        System.out.println("Generating json from xml data "+xmlData);
++        return xmlData;
++    }
++}
++
++class Client {
++
++    public void getReport(IReports reports, String rawData) {
++        System.out.printf(reports.getJsonData(rawData));
++    }
++}
++public class AP {
++
++    public static void main(String[] args) {
++        XDP xdp = new XDP();
++        IReports reports = new XDPAdapter(xdp);
++
++        Client client = new Client();
++        client.getReport(reports, "Alice:10");
++    }
++}
