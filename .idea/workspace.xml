@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/learning-streams/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-streams/src/main/java/FlatMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,55 +44,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AP.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AbstractFactory.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AdapterPattern.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Ap.executor&quot;: &quot;Run&quot;,
-    &quot;Application.COR.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DP.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DecoratorPattern.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FactoryDesignPatternApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FactoryMethod.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PP.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProtectionProxy.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RemoteProxy.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SimpleFactory.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ThreadSafeDoubleLockingSingleton.executor&quot;: &quot;Run&quot;,
-    &quot;Application.VP.executor&quot;: &quot;Run&quot;,
-    &quot;Application.VirtualProxy.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.30375&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AP.executor": "Run",
+    "Application.AbstractFactory.executor": "Run",
+    "Application.AdapterPattern.executor": "Run",
+    "Application.Ap.executor": "Run",
+    "Application.COR.executor": "Run",
+    "Application.DP.executor": "Run",
+    "Application.DecoratorPattern.executor": "Run",
+    "Application.FactoryDesignPatternApplication.executor": "Run",
+    "Application.FactoryMethod.executor": "Run",
+    "Application.FlatMap.executor": "Run",
+    "Application.Main (1).executor": "Debug",
+    "Application.Main (2).executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PP.executor": "Run",
+    "Application.ProtectionProxy.executor": "Run",
+    "Application.RemoteProxy.executor": "Run",
+    "Application.SimpleFactory.executor": "Run",
+    "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
+    "Application.VP.executor": "Run",
+    "Application.VirtualProxy.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.30375"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Tomato/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.FlatMap">
     <configuration name="Ap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ap" />
       <module name="adapter-design-pattern" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="COR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="COR" />
-      <module name="chain-of-responsibility" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,6 +105,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FlatMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FlatMap" />
+      <module name="learning-streams" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="learning-streams" />
@@ -121,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FlatMap" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Ap" />
         <item itemvalue="Application.DP" />
         <item itemvalue="Application.DecoratorPattern" />
-        <item itemvalue="Application.COR" />
       </list>
     </recent_temporary>
   </component>
