@@ -1,6 +1,6 @@
 package models;
 
-import models.strategies.PaymentStrategy;
+import strategies.PaymentStrategy;
 
 import java.util.List;
 

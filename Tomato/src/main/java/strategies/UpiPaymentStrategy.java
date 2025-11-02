@@ -1,4 +1,6 @@
-package models.strategies;
+package strategies;
+
+import strategies.PaymentStrategy;
 
 public class UpiPaymentStrategy implements PaymentStrategy {
 
@@ -7,6 +9,7 @@ public class UpiPaymentStrategy implements PaymentStrategy {
     public  UpiPaymentStrategy(String mobile) {
         this.mobile = mobile;
     }
+
     @Override
     public void pay(double price) {
         System.out.println("Paying " + price + " using mobile " + mobile);

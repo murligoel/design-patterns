@@ -10,6 +10,7 @@ public class User {
         this.userId = userId;
         this.name = name;
         this.address = address;
+        this.cart = new Cart();
     }
 
     public String getAddress() {

@@ -1,5 +1,10 @@
+import factories.NowOrderFactory;
+import factories.OrderFactory;
+import factories.ScheduledOrderFactory;
+import managers.OrderManager;
 import managers.RestaurantManager;
 import models.*;
+import service.NotificationService;
 import strategies.PaymentStrategy;
 
 import java.util.ArrayList;
@@ -58,5 +63,42 @@ public class TomatoApp {
 
     public Order checkOutNow(User user, String orderType, PaymentStrategy paymentStrategy) {
         return checkout(user, orderType, paymentStrategy, new NowOrderFactory());
+    }
+
+    public Order checkoutScheduled(User user, String orderType, PaymentStrategy paymentStrategy, String scheduleTime) {
+        return checkout(user, orderType, paymentStrategy, new ScheduledOrderFactory(scheduleTime));
+    }
+
+    public Order checkout(User user, String orderType, PaymentStrategy paymentStrategy, OrderFactory orderFactory) {
+        if(user.getCart().isEmpty()) return null;
+
+        Cart userCart = user.getCart();
+        Restaurant orderedRestaurant = userCart.getRestaurant();
+        List<MenuItem> orderedMenuItems = orderedRestaurant.getMenuItems();
+        double totalCost = userCart.getTotalCOst();
+
+        Order order = orderFactory.createOrder(user, userCart, orderedRestaurant, orderedMenuItems, paymentStrategy, totalCost, orderType);
+        OrderManager.getInstance().addOrder(order);
+        return order;
+
+    }
+
+
+    public void payForOrder(User user, Order order) {
+        boolean isPaymentSuccess = order.processPayment();
+
+        if(isPaymentSuccess) {
+            NotificationService.notify(order);
+        }
+    }
+
+    public void printUserCart(User user) {
+        System.out.println("Items in cart:");
+        System.out.println("------------------------------------");
+        for (MenuItem item : user.getCart().getItems()) {
+            System.out.println(item.getCode() + " : " + item.getName() + " : ₹" + item.getPrice());
+        }
+        System.out.println("------------------------------------");
+        System.out.println("Grand total : ₹" + user.getCart().getTotalCOst());
     }
 }

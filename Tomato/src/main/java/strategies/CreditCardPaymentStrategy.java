@@ -1,4 +1,6 @@
-package models.strategies;
+package strategies;
+
+import strategies.PaymentStrategy;
 
 public class CreditCardPaymentStrategy implements PaymentStrategy {
 

@@ -19,11 +19,16 @@ public class Cart {
         items.add(menuItem);
     }
 
-    public void getTotalCOst() {
+    public double getTotalCOst() {
         double sum = 0.0;
         for(MenuItem menuItem : items) {
             sum += Double.parseDouble(menuItem.getPrice());
         }
+        return sum;
+    }
+
+    public boolean isEmpty() {
+        return restaurant == null || items.isEmpty();
     }
 
     public void clearCart() {
