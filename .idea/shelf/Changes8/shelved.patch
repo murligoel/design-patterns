@@ -1,0 +1,227 @@
+Index: ../design-patterns/learning-streams/src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.List;\nimport java.util.stream.Collectors;\n\npublic class Main {\n\n    public static void main(String[] args) {\n        List<String> strings = List.of(\"one\",\"two\",\"three\",\"four\");\n\n        var map = strings.stream()\n                .collect(Collectors.groupingBy(String::length, Collectors.counting()));\n        map.forEach((key, value) -> System.out.println(key + \" :: \" + value));\n\n\n\n\n        record City(int population) {}\n\n        List<City> cities =\n                List.of(\n                        new City(100_000),\n                        new City(200_000),\n                        new City(500_000));\n\n        int sum = cities.stream()\n                .mapToInt(city -> city.population())\n                .filter(population -> population > 100_000)\n                .sum();\n        System.out.println(\"Sum = \" + sum);\n\n//        Collection<Integer> populations         = cities.map(city -> city.getPopulation());\n//        Collection<Integer> filteredPopulations = populations.filter(population -> population > 100_000);\n//        int sum                                 = filteredPopulations.sum();\n\n\n//        Stream<City> streamOfCities         = cities.stream();\n//        Stream<Integer> populations         = streamOfCities.map(city -> city.getPopulation());\n//        Stream<Integer> filteredPopulations = populations.filter(population -> population > 100_000);\n//        int sum = filteredPopulations.sum(); // in fact this code does not compile; we'll fix it later\n\n\n        List<String> string1 = List.of(\"one\", \"two\", \"three\", \"four\");\n\n        List<Integer> lengths = string1.stream()\n                .map(String::length)\n                .toList();\n\n        System.out.println(\"lengths = \" + lengths);\n\n        long count = string1.stream()\n                .map(String::length)\n                .filter(length -> length == 3)\n                .count();\n\n        System.out.println(\"count = \" + count);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/learning-streams/src/main/java/Main.java b/../design-patterns/learning-streams/src/main/java/Main.java
+--- a/../design-patterns/learning-streams/src/main/java/Main.java	(revision 15bec1f0613b6b12d42cc13573dbce2674b701a9)
++++ b/../design-patterns/learning-streams/src/main/java/Main.java	(date 1762704089342)
+@@ -4,13 +4,17 @@
+ public class Main {
+ 
+     public static void main(String[] args) {
++
+         List<String> strings = List.of("one","two","three","four");
+ 
+         var map = strings.stream()
+                 .collect(Collectors.groupingBy(String::length, Collectors.counting()));
+         map.forEach((key, value) -> System.out.println(key + " :: " + value));
+ 
++        var newMap = strings.stream()
++                .collect(Collectors.groupingBy(String::length, Collectors.counting()));
+ 
++        newMap.forEach((key, value) -> System.out.println(key + " :: " + value));
+ 
+ 
+         record City(int population) {}
+@@ -27,6 +31,13 @@
+                 .sum();
+         System.out.println("Sum = " + sum);
+ 
++        int newSum = cities.stream()
++                .mapToInt(City::population)
++                .filter(abc -> abc > 100_000)
++                .sum();
++
++        System.out.println("New Sum = " + newSum);
++
+ //        Collection<Integer> populations         = cities.map(city -> city.getPopulation());
+ //        Collection<Integer> filteredPopulations = populations.filter(population -> population > 100_000);
+ //        int sum                                 = filteredPopulations.sum();
+Index: ../design-patterns/learning-streams/src/main/java/FlatMap.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Comparator;\nimport java.util.List;\nimport java.util.function.Function;\nimport java.util.stream.Stream;\n\npublic class FlatMap {\n\n    public static void main(String[] args) {\n\n        record City(String name, int population) {}\n        record Country(String name, List<City> cities) {}\n\n        City newYork= new City(\"New York\", 8_258);\n        City losAngeles = new City(\"Los Angeles\", 3_821);\n        Country usa = new Country(\"USA\", List.of(newYork, losAngeles));\n\n        City london = new City(\"London\", 8_866);\n        City manchester = new City(\"Manchester\", 568);\n        Country uk = new Country(\"United Kindgom\", List.of(london, manchester));\n\n        City paris = new City(\"Paris\", 2_103);\n        City marseille = new City(\"Marseille\", 877);\n        Country france = new Country(\"France\", List.of(paris, marseille));\n\n        List<Country> countries = List.of(usa, uk, france);\n\n        int totalPopulation = countries\n                .stream()\n                .flatMap(country -> country.cities().stream())\n                .mapToInt(country -> country.population)\n                .sum();\n\n        System.out.println(\"total population = \" + totalPopulation);\n\n\n\n\n        List<Integer> ints = List.of(1, 4, 2, 1, 3, 3);\n\n        List<Integer>  distincts = ints.stream()\n                        .distinct()\n                        .toList();\n        System.out.println(\"distinct ints: \" + distincts);\n\n\n        List<String> strings = List.of(\"one\", \"two\", \"three\", \"four\");\n\n        List<String> naturalSort =\n                strings.stream()\n                        .sorted()\n                        .toList();\n        System.out.println(\"natural sort: \" + naturalSort);\n\n        List<String> shortestFirst =\n                strings.stream()\n                        .sorted(Comparator.comparingInt(String::length))\n                        .toList();\n        System.out.println(\"shortest first: \" + shortestFirst);\n\n        List<Integer> list0 = List.of(1, 2, 3);\n        List<Integer> list1 = List.of(4, 5, 6);\n        List<Integer> list2 = List.of(7, 8, 9);\n\n        // 1st pattern: concat\n        List<Integer> concat =\n                Stream.concat(list0.stream(), list1.stream())\n                        .toList();\n\n        // 2nd pattern: flatMap\n        List<Integer> flatMap =\n                Stream.of(list0.stream(), list1.stream(), list2.stream())\n                        .flatMap(Function.identity())\n                        .toList();\n\n        System.out.println(\"concat  = \" + concat);\n        System.out.println(\"flatMap = \" + flatMap);\n\n\n        List<String> strings1 = List.of(\"one\", \"two\", \"three\", \"four\");\n\n        List<String> result =\n                strings1.stream()\n                        .peek(s -> System.out.println(\"Starting with = \" + s))\n                        .filter(s -> s.startsWith(\"t\"))\n                        .peek(s -> System.out.println(\"Filtered = \" + s))\n                        .map(String::toUpperCase)\n                        .peek(s -> System.out.println(\"Mapped = \" + s))\n                        .toList();\n        System.out.println(\"result = \" + result);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/learning-streams/src/main/java/FlatMap.java b/../design-patterns/learning-streams/src/main/java/FlatMap.java
+--- a/../design-patterns/learning-streams/src/main/java/FlatMap.java	(revision 15bec1f0613b6b12d42cc13573dbce2674b701a9)
++++ b/../design-patterns/learning-streams/src/main/java/FlatMap.java	(date 1762772135313)
+@@ -27,7 +27,7 @@
+         int totalPopulation = countries
+                 .stream()
+                 .flatMap(country -> country.cities().stream())
+-                .mapToInt(country -> country.population)
++                .mapToInt(city -> city.population)
+                 .sum();
+ 
+         System.out.println("total population = " + totalPopulation);
+@@ -38,6 +38,7 @@
+         List<Integer> ints = List.of(1, 4, 2, 1, 3, 3);
+ 
+         List<Integer>  distincts = ints.stream()
++                .sorted()
+                         .distinct()
+                         .toList();
+         System.out.println("distinct ints: " + distincts);
+Index: ../design-patterns/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/factories/NowOrderFactory.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/factories/OrderFactory.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/factories/ScheduledOrderFactory.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/service/NotificationService.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Tomato/src/main/java/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Tomato/src/main/java/TomatoApp.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/TomatoApp.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Tomato/src/main/java/models/Cart.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/models/Cart.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Tomato/src/main/java/models/Order.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/models/Order.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Tomato/src/main/java/strategies/CreditCardPaymentStrategy.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/strategies/CreditCardPaymentStrategy.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Tomato/src/main/java/strategies/UpiPaymentStrategy.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Tomato/src/main/java/strategies/UpiPaymentStrategy.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;murligoel&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/murligoel/design-patterns.git&quot;,\n    &quot;accountId&quot;: &quot;3bfda529-8593-4339-a0ab-b315a2153426&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"32lfVxEqzeT92wqDcr56hXESOMZ\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.AP.executor\": \"Run\",\n    \"Application.AbstractFactory.executor\": \"Run\",\n    \"Application.AdapterPattern.executor\": \"Run\",\n    \"Application.Ap.executor\": \"Run\",\n    \"Application.COR.executor\": \"Run\",\n    \"Application.DP.executor\": \"Run\",\n    \"Application.DecoratorPattern.executor\": \"Run\",\n    \"Application.FactoryDesignPatternApplication.executor\": \"Run\",\n    \"Application.FactoryMethod.executor\": \"Run\",\n    \"Application.FlatMap.executor\": \"Run\",\n    \"Application.Main (1).executor\": \"Run\",\n    \"Application.Main (2).executor\": \"Run\",\n    \"Application.Main.executor\": \"Run\",\n    \"Application.PP.executor\": \"Run\",\n    \"Application.ProtectionProxy.executor\": \"Run\",\n    \"Application.RemoteProxy.executor\": \"Run\",\n    \"Application.SimpleFactory.executor\": \"Run\",\n    \"Application.ThreadSafeDoubleLockingSingleton.executor\": \"Run\",\n    \"Application.VP.executor\": \"Run\",\n    \"Application.VirtualProxy.executor\": \"Run\",\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"onboarding.tips.debug.path\": \"/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.30375\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Tomato/src/main/java\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.Main (1)\">\n    <configuration name=\"Ap\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Ap\" />\n      <module name=\"adapter-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DP\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"DP\" />\n      <module name=\"decorator-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FlatMap\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"FlatMap\" />\n      <module name=\"learning-streams\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Main (1)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"Tomato\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"learning-streams\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main (1)\" />\n        <item itemvalue=\"Application.FlatMap\" />\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Application.Ap\" />\n        <item itemvalue=\"Application.DP\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\" />\n      <created>1758000107146</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1758000107146</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/workspace.xml b/../design-patterns/.idea/workspace.xml
+--- a/../design-patterns/.idea/workspace.xml	(revision 15bec1f0613b6b12d42cc13573dbce2674b701a9)
++++ b/../design-patterns/.idea/workspace.xml	(date 1762772135471)
+@@ -5,17 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/factories/NowOrderFactory.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/factories/OrderFactory.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/factories/ScheduledOrderFactory.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Tomato/src/main/java/service/NotificationService.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tomato/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomato/src/main/java/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tomato/src/main/java/TomatoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomato/src/main/java/TomatoApp.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tomato/src/main/java/models/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/Cart.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tomato/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomato/src/main/java/models/Order.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tomato/src/main/java/strategies/CreditCardPaymentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomato/src/main/java/strategies/CreditCardPaymentStrategy.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Tomato/src/main/java/strategies/UpiPaymentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomato/src/main/java/strategies/UpiPaymentStrategy.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/chain-of-responsibility/src/main/java/COR.java" beforeDir="false" afterPath="$PROJECT_DIR$/chain-of-responsibility/src/main/java/COR.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/learning-streams/src/main/java/FlatMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-streams/src/main/java/FlatMap.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/learning-streams/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-streams/src/main/java/Main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -53,46 +46,46 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.AP.executor": "Run",
+-    "Application.AbstractFactory.executor": "Run",
+-    "Application.AdapterPattern.executor": "Run",
+-    "Application.Ap.executor": "Run",
+-    "Application.COR.executor": "Run",
+-    "Application.DP.executor": "Run",
+-    "Application.DecoratorPattern.executor": "Run",
+-    "Application.FactoryDesignPatternApplication.executor": "Run",
+-    "Application.FactoryMethod.executor": "Run",
+-    "Application.FlatMap.executor": "Run",
+-    "Application.Main (1).executor": "Run",
+-    "Application.Main (2).executor": "Run",
+-    "Application.Main.executor": "Run",
+-    "Application.PP.executor": "Run",
+-    "Application.ProtectionProxy.executor": "Run",
+-    "Application.RemoteProxy.executor": "Run",
+-    "Application.SimpleFactory.executor": "Run",
+-    "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
+-    "Application.VP.executor": "Run",
+-    "Application.VirtualProxy.executor": "Run",
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "onboarding.tips.debug.path": "/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.30375"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.AP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.AbstractFactory.executor&quot;: &quot;Run&quot;,
++    &quot;Application.AdapterPattern.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Ap.executor&quot;: &quot;Run&quot;,
++    &quot;Application.COR.executor&quot;: &quot;Run&quot;,
++    &quot;Application.DP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.DecoratorPattern.executor&quot;: &quot;Run&quot;,
++    &quot;Application.FactoryDesignPatternApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Application.FactoryMethod.executor&quot;: &quot;Run&quot;,
++    &quot;Application.FlatMap.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;Application.PP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ProtectionProxy.executor&quot;: &quot;Run&quot;,
++    &quot;Application.RemoteProxy.executor&quot;: &quot;Run&quot;,
++    &quot;Application.SimpleFactory.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ThreadSafeDoubleLockingSingleton.executor&quot;: &quot;Run&quot;,
++    &quot;Application.VP.executor&quot;: &quot;Run&quot;,
++    &quot;Application.VirtualProxy.executor&quot;: &quot;Run&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.30375&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/Tomato/src/main/java" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Main (1)">
++  <component name="RunManager" selected="Application.FlatMap">
+     <configuration name="Ap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Ap" />
+       <module name="adapter-design-pattern" />
+@@ -100,9 +93,9 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="DP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="DP" />
+-      <module name="decorator-design-pattern" />
++    <configuration name="COR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="COR" />
++      <module name="chain-of-responsibility" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -130,11 +123,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Main (1)" />
+         <item itemvalue="Application.FlatMap" />
++        <item itemvalue="Application.COR" />
+         <item itemvalue="Application.Main" />
++        <item itemvalue="Application.Main (1)" />
+         <item itemvalue="Application.Ap" />
+-        <item itemvalue="Application.DP" />
+       </list>
+     </recent_temporary>
+   </component>
+Index: ../design-patterns/chain-of-responsibility/src/main/java/COR.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>abstract class MoneyHandler {\n\n    protected MoneyHandler nextHandler;\n\n    public MoneyHandler() {\n        this.nextHandler = null;\n    }\n\n    public void setNextHandler(MoneyHandler nextHandler) {\n        this.nextHandler = nextHandler;\n    }\n\n    public abstract void dispense(int amount);\n}\n\nclass ThousandHandler extends MoneyHandler {\n\n    private int numNotes;\n\n    public ThousandHandler(int numNotes) {\n        this.numNotes = numNotes;\n    }\n\n    @Override\n    public void dispense(int amount) {\n        int notesNeeded = amount/1000;\n        if (notesNeeded > numNotes) {\n            notesNeeded = numNotes;\n            numNotes = 0;\n        } else {\n            numNotes -= notesNeeded;\n        }\n\n        if (notesNeeded > 0)\n            System.out.println(\"Dispensing \" + notesNeeded + \" x ₹1000 notes.\");\n\n        int remainingAmount = amount - (notesNeeded * 1000);\n        if (remainingAmount > 0) {\n            if(nextHandler != null) {\n                nextHandler.dispense(remainingAmount);\n            } else {\n                System.out.println(\"Remaining amount of \" + remainingAmount + \" cannot be fulfilled (Insufficinet fund in ATM)\");\n            }\n        }\n    }\n}\n\nclass FiveHundredHandler extends MoneyHandler {\n    private int numNotes;\n\n    public FiveHundredHandler(int numNotes) {\n        this.numNotes = numNotes;\n    }\n\n    @Override\n    public void dispense(int amount) {\n        int notesNeeded = amount / 500;\n\n        if (notesNeeded > numNotes) {\n            notesNeeded = numNotes;\n            numNotes = 0;\n        } else {\n            numNotes -= notesNeeded;\n        }\n\n        if (notesNeeded > 0)\n            System.out.println(\"Dispensing \" + notesNeeded + \" x ₹500 notes.\");\n\n        int remainingAmount = amount - (notesNeeded * 500);\n        if (remainingAmount > 0) {\n            if (nextHandler != null) nextHandler.dispense(remainingAmount);\n            else {\n                System.out.println(\"Remaining amount of \" + remainingAmount + \" cannot be fulfilled (Insufficinet fund in ATM)\");\n            }\n        }\n    }\n}\n\nclass TwoHundredHandler extends MoneyHandler {\n    private int numNotes;\n\n    public TwoHundredHandler(int numNotes) {\n        this.numNotes = numNotes;\n    }\n\n    @Override\n    public void dispense(int amount) {\n        int notesNeeded = amount / 200;\n\n        if (notesNeeded > numNotes) {\n            notesNeeded = numNotes;\n            numNotes = 0;\n        } else {\n            numNotes -= notesNeeded;\n        }\n\n        if (notesNeeded > 0)\n            System.out.println(\"Dispensing \" + notesNeeded + \" x ₹200 notes.\");\n\n        int remainingAmount = amount - (notesNeeded * 200);\n        if (remainingAmount > 0) {\n            if (nextHandler != null) nextHandler.dispense(remainingAmount);\n            else {\n                System.out.println(\"Remaining amount of \" + remainingAmount + \" cannot be fulfilled (Insufficinet fund in ATM)\");\n            }\n        }\n    }\n}\n\nclass HundredHandler extends MoneyHandler {\n    private int numNotes;\n\n    public HundredHandler(int numNotes) {\n        this.numNotes = numNotes;\n    }\n\n    @Override\n    public void dispense(int amount) {\n        int notesNeeded = amount / 100;\n\n        if (notesNeeded > numNotes) {\n            notesNeeded = numNotes;\n            numNotes = 0;\n        } else {\n            numNotes -= notesNeeded;\n        }\n\n        if (notesNeeded > 0)\n            System.out.println(\"Dispensing \" + notesNeeded + \" x ₹100 notes.\");\n\n        int remainingAmount = amount - (notesNeeded * 100);\n        if (remainingAmount > 0) {\n            if (nextHandler != null) nextHandler.dispense(remainingAmount);\n            else {\n                System.out.println(\"Remaining amount of \" + remainingAmount + \" cannot be fulfilled (Insufficinet fund in ATM)\");\n            }\n        }\n    }\n}\n\n\n\n\npublic class COR {\n\n    public static void main(String[] args) {\n        MoneyHandler thousandHandler = new ThousandHandler(3);\n        MoneyHandler fiveHundredHandler = new FiveHundredHandler(5);\n        MoneyHandler twoHundredHandler = new TwoHundredHandler(10);\n        MoneyHandler hundredHandler = new HundredHandler(20);\n\n        thousandHandler.setNextHandler(fiveHundredHandler);\n        fiveHundredHandler.setNextHandler(twoHundredHandler);\n        twoHundredHandler.setNextHandler(hundredHandler);\n\n        int amountToWithdraw = 4000;\n\n        System.out.println(\"\\nDispensing amount: ₹\" + amountToWithdraw);\n        thousandHandler.dispense(amountToWithdraw);\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/chain-of-responsibility/src/main/java/COR.java b/../design-patterns/chain-of-responsibility/src/main/java/COR.java
+--- a/../design-patterns/chain-of-responsibility/src/main/java/COR.java	(revision 15bec1f0613b6b12d42cc13573dbce2674b701a9)
++++ b/../design-patterns/chain-of-responsibility/src/main/java/COR.java	(date 1762707849886)
+@@ -153,7 +153,7 @@
+         fiveHundredHandler.setNextHandler(twoHundredHandler);
+         twoHundredHandler.setNextHandler(hundredHandler);
+ 
+-        int amountToWithdraw = 4000;
++        int amountToWithdraw = 505;
+ 
+         System.out.println("\nDispensing amount: ₹" + amountToWithdraw);
+         thousandHandler.dispense(amountToWithdraw);

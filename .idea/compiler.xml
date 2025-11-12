@@ -13,6 +13,7 @@
         <module name="observer-design-pattern" />
         <module name="factory-design-pattern" />
         <module name="practice-design-pattern" />
+        <module name="builder-design-pattern" />
         <module name="learning-streams" />
         <module name="Tomato" />
         <module name="chain-of-responsibility" />

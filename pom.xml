@@ -18,6 +18,7 @@
         <module>proxy-design-pattern</module>
         <module>chain-of-responsibility</module>
         <module>Tomato</module>
+        <module>builder-design-pattern</module>
     </modules>
 
     <properties>
