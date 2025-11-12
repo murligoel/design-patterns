@@ -89,7 +89,7 @@
       <recent name="$PROJECT_DIR$/Tomato/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.simpleBuilder.Main">
+  <component name="RunManager" selected="Application.WithoutBuilder">
     <configuration name="COR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="COR" />
       <module name="chain-of-responsibility" />
@@ -104,13 +104,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="learning-streams" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ThreadSafeDoubleLockingSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.singletondesignpattern.ThreadSafeDoubleLockingSingleton" />
       <module name="singleton-design-pattern" />
@@ -120,6 +113,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WithoutBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WithoutBuilder" />
+      <module name="builder-design-pattern" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WithoutBuilder" />
         <item itemvalue="Application.simpleBuilder.Main" />
         <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
         <item itemvalue="Application.FlatMap" />
         <item itemvalue="Application.COR" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
