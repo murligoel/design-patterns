@@ -20,6 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hotel-management-system" target="21" />
       <module name="singleton-design-pattern" target="17" />
     </bytecodeTargetLevel>
   </component>

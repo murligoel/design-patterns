@@ -1,0 +1,262 @@
+Index: ../design-patterns/hotel-management-system/src/main/java/HMS.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/hotel-management-system/src/main/java/HMS.java b/../design-patterns/hotel-management-system/src/main/java/HMS.java
+new file mode 100644
+--- /dev/null	(date 1762969675171)
++++ b/../design-patterns/hotel-management-system/src/main/java/HMS.java	(date 1762969675171)
+@@ -0,0 +1,64 @@
++import java.util.Date;
++import java.util.List;
++
++public class HMS {
++    String name;
++    Integer id;
++    Location hotelLocation;
++    List<Room> roomList;
++}
++
++class Location {
++    Double latitude;
++    Double longitude;
++}
++
++class Room {
++    String roomNumber;
++    RoomStyle roomStyle;
++    RoomStatus roomStatus;
++    Double bookingPrice;
++    List<RoomKey> roomKeys;
++    List<HouseKeepingLog> houseKeepingLogs;
++}
++
++enum RoomStyle {
++    STANDARD, DELUX, FAMILY_SUITE
++}
++
++enum RoomStatus {
++    AVAILABLE, RESERVED, NOT_AVAILABLE, OCCUPIED, SERVICE_IN_PROGRESS
++}
++
++class RoomKey {
++    String keyId;
++    String barCode;
++    String issuedAt;
++    Boolean isActive;
++    Boolean isMaster;
++
++    public void addRoom(Room room) {
++
++    }
++}
++
++abstract class Person {
++    String name;
++    Account accountDetail;
++    String phone;
++}
++
++class Account {
++    String username;
++    String password;
++
++    AccountStatus accountStatus;
++}
++
++enum AccountStatus {
++    ACTIVE, CLOSED, BLOCKED
++}
++
++class HouseKeeper extends Person {
++    public List<Room> getRoomsServiced(Date date);
++}
+\ No newline at end of file
+Index: ../design-patterns/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/builder-design-pattern/pom.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/builder-design-pattern/src/main/java/WithoutBuilder.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/builder-design-pattern/src/main/java/simpleBuilder/HttpRequest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;murligoel&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/murligoel/design-patterns.git&quot;,\n    &quot;accountId&quot;: &quot;3bfda529-8593-4339-a0ab-b315a2153426&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"32lfVxEqzeT92wqDcr56hXESOMZ\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Application.AP.executor&quot;: &quot;Run&quot;,\n    &quot;Application.AbstractFactory.executor&quot;: &quot;Run&quot;,\n    &quot;Application.AdapterPattern.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Ap.executor&quot;: &quot;Run&quot;,\n    &quot;Application.COR.executor&quot;: &quot;Run&quot;,\n    &quot;Application.DP.executor&quot;: &quot;Run&quot;,\n    &quot;Application.DecoratorPattern.executor&quot;: &quot;Run&quot;,\n    &quot;Application.FactoryDesignPatternApplication.executor&quot;: &quot;Run&quot;,\n    &quot;Application.FactoryMethod.executor&quot;: &quot;Run&quot;,\n    &quot;Application.FlatMap.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,\n    &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\n    &quot;Application.PP.executor&quot;: &quot;Run&quot;,\n    &quot;Application.ProtectionProxy.executor&quot;: &quot;Run&quot;,\n    &quot;Application.RemoteProxy.executor&quot;: &quot;Run&quot;,\n    &quot;Application.SimpleFactory.executor&quot;: &quot;Run&quot;,\n    &quot;Application.ThreadSafeDoubleLockingSingleton.executor&quot;: &quot;Run&quot;,\n    &quot;Application.VP.executor&quot;: &quot;Run&quot;,\n    &quot;Application.VirtualProxy.executor&quot;: &quot;Run&quot;,\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.30375&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Tomato/src/main/java\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.WithoutBuilder\">\n    <configuration name=\"COR\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"COR\" />\n      <module name=\"chain-of-responsibility\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FlatMap\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"FlatMap\" />\n      <module name=\"learning-streams\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ThreadSafeDoubleLockingSingleton\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.practice.singletondesignpattern.ThreadSafeDoubleLockingSingleton\" />\n      <module name=\"singleton-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.practice.singletondesignpattern.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"WithoutBuilder\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"WithoutBuilder\" />\n      <module name=\"builder-design-pattern\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"simpleBuilder.Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"simpleBuilder.Main\" />\n      <module name=\"builder-design-pattern\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"simpleBuilder.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.WithoutBuilder\" />\n        <item itemvalue=\"Application.simpleBuilder.Main\" />\n        <item itemvalue=\"Application.ThreadSafeDoubleLockingSingleton\" />\n        <item itemvalue=\"Application.FlatMap\" />\n        <item itemvalue=\"Application.COR\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8e201f40-8e19-4624-aba9-a3a9f9576aa7\" name=\"Changes\" comment=\"\" />\n      <created>1758000107146</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1758000107146</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/workspace.xml b/../design-patterns/.idea/workspace.xml
+--- a/../design-patterns/.idea/workspace.xml	(revision e6fba9bedcd0015337f9d67f72d51ef39d95cb8b)
++++ b/../design-patterns/.idea/workspace.xml	(date 1763007543377)
+@@ -5,12 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8e201f40-8e19-4624-aba9-a3a9f9576aa7" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/builder-design-pattern/pom.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/builder-design-pattern/src/main/java/WithoutBuilder.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/builder-design-pattern/src/main/java/simpleBuilder/HttpRequest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/hotel-management-system/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/hotel-management-system/src/main/java/HMS.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+     </list>
+@@ -50,40 +48,42 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.AP.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.AbstractFactory.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.AdapterPattern.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Ap.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.COR.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.DP.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.DecoratorPattern.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.FactoryDesignPatternApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.FactoryMethod.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.FlatMap.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.PP.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.ProtectionProxy.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.RemoteProxy.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.SimpleFactory.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.ThreadSafeDoubleLockingSingleton.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.VP.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.VirtualProxy.executor&quot;: &quot;Run&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.30375&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.AP.executor": "Run",
++    "Application.AbstractFactory.executor": "Run",
++    "Application.AdapterPattern.executor": "Run",
++    "Application.Ap.executor": "Run",
++    "Application.COR.executor": "Run",
++    "Application.DP.executor": "Run",
++    "Application.DecoratorPattern.executor": "Run",
++    "Application.FactoryDesignPatternApplication.executor": "Run",
++    "Application.FactoryMethod.executor": "Run",
++    "Application.FlatMap.executor": "Run",
++    "Application.Main (1).executor": "Run",
++    "Application.Main (2).executor": "Run",
++    "Application.Main.executor": "Run",
++    "Application.PP.executor": "Run",
++    "Application.ProtectionProxy.executor": "Run",
++    "Application.RemoteProxy.executor": "Run",
++    "Application.SimpleFactory.executor": "Run",
++    "Application.ThreadSafeDoubleLockingSingleton.executor": "Run",
++    "Application.VP.executor": "Run",
++    "Application.VirtualProxy.executor": "Run",
++    "Application.WithoutBuilder.executor": "Run",
++    "Application.simpleBuilder.Main.executor": "Debug",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "git-widget-placeholder": "main",
++    "kotlin-language-version-configured": "true",
++    "onboarding.tips.debug.path": "/Users/murligoel/design-patterns/practice-design-pattern/src/main/java/com/practice/Main.java",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.30375"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/Tomato/src/main/java" />
+Index: ../design-patterns/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n\n    <groupId>com.practice</groupId>\n    <artifactId>Design-Patterns</artifactId>\n    <version>1.0-SNAPSHOT</version>\n    <packaging>pom</packaging>\n    <modules>\n        <module>strategy-design-pattern</module>\n        <module>observer-design-pattern</module>\n        <module>practice-design-pattern</module>\n        <module>decorator-design-pattern</module>\n        <module>adapter-design-pattern</module>\n        <module>learning-streams</module>\n        <module>proxy-design-pattern</module>\n        <module>chain-of-responsibility</module>\n        <module>Tomato</module>\n        <module>builder-design-pattern</module>\n    </modules>\n\n    <properties>\n        <maven.compiler.source>21</maven.compiler.source>\n        <maven.compiler.target>21</maven.compiler.target>\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n    </properties>\n\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/pom.xml b/../design-patterns/pom.xml
+--- a/../design-patterns/pom.xml	(revision e6fba9bedcd0015337f9d67f72d51ef39d95cb8b)
++++ b/../design-patterns/pom.xml	(date 1762969190302)
+@@ -19,6 +19,7 @@
+         <module>chain-of-responsibility</module>
+         <module>Tomato</module>
+         <module>builder-design-pattern</module>
++        <module>hotel-management-system</module>
+     </modules>
+ 
+     <properties>
+Index: ../design-patterns/hotel-management-system/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/hotel-management-system/pom.xml b/../design-patterns/hotel-management-system/pom.xml
+new file mode 100644
+--- /dev/null	(date 1762969190294)
++++ b/../design-patterns/hotel-management-system/pom.xml	(date 1762969190294)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <parent>
++        <groupId>com.practice</groupId>
++        <artifactId>Design-Patterns</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++
++    <artifactId>hotel-management-system</artifactId>
++
++    <properties>
++        <maven.compiler.source>21</maven.compiler.source>
++        <maven.compiler.target>21</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: ../design-patterns/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"Encoding\">\n    <file url=\"file://$PROJECT_DIR$/Tomato/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/Tomato/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/adapter-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/adapter-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/builder-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/builder-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/chain-of-responsibility/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/chain-of-responsibility/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/decorator-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/decorator-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/factory-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/learning-streams/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/learning-streams/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/observer-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/observer-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/practice-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/practice-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/proxy-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/proxy-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/singleton-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/strategy-design-pattern/src/main/java\" charset=\"UTF-8\" />\n    <file url=\"file://$PROJECT_DIR$/strategy-design-pattern/src/main/resources\" charset=\"UTF-8\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/encodings.xml b/../design-patterns/.idea/encodings.xml
+--- a/../design-patterns/.idea/encodings.xml	(revision e6fba9bedcd0015337f9d67f72d51ef39d95cb8b)
++++ b/../design-patterns/.idea/encodings.xml	(date 1762969675564)
+@@ -12,6 +12,8 @@
+     <file url="file://$PROJECT_DIR$/decorator-design-pattern/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/decorator-design-pattern/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/factory-design-pattern/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/hotel-management-system/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/hotel-management-system/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/learning-streams/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/learning-streams/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/observer-design-pattern/src/main/java" charset="UTF-8" />
+Index: ../design-patterns/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"CompilerConfiguration\">\n    <annotationProcessing>\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\n        <outputRelativeToContentRoot value=\"true\" />\n        <module name=\"adapter-design-pattern\" />\n        <module name=\"proxy-design-pattern\" />\n        <module name=\"decorator-design-pattern\" />\n        <module name=\"strategy-design-pattern\" />\n        <module name=\"observer-design-pattern\" />\n        <module name=\"factory-design-pattern\" />\n        <module name=\"practice-design-pattern\" />\n        <module name=\"builder-design-pattern\" />\n        <module name=\"learning-streams\" />\n        <module name=\"Tomato\" />\n        <module name=\"chain-of-responsibility\" />\n      </profile>\n    </annotationProcessing>\n    <bytecodeTargetLevel>\n      <module name=\"singleton-design-pattern\" target=\"17\" />\n    </bytecodeTargetLevel>\n  </component>\n  <component name=\"JavacSettings\">\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\n      <module name=\"factory-design-pattern\" options=\"-parameters\" />\n      <module name=\"singleton-design-pattern\" options=\"-parameters\" />\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../design-patterns/.idea/compiler.xml b/../design-patterns/.idea/compiler.xml
+--- a/../design-patterns/.idea/compiler.xml	(revision e6fba9bedcd0015337f9d67f72d51ef39d95cb8b)
++++ b/../design-patterns/.idea/compiler.xml	(date 1762969675555)
+@@ -14,6 +14,7 @@
+         <module name="factory-design-pattern" />
+         <module name="practice-design-pattern" />
+         <module name="builder-design-pattern" />
++        <module name="hotel-management-system" />
+         <module name="learning-streams" />
+         <module name="Tomato" />
+         <module name="chain-of-responsibility" />
