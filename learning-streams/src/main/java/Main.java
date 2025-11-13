@@ -1,4 +1,7 @@
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -52,5 +55,19 @@ public class Main {
                 .count();
 
         System.out.println("count = " + count);
+
+        String input = "Java articles are Awesome";
+
+        Character result = input.chars() // IntStream of characters
+                .mapToObj(c -> Character.toLowerCase((char) c)) // convert to lowercase char
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting())) // count occurrences preserving order
+                .entrySet()
+                .stream()
+                .filter(e -> e.getValue() == 1) // only those that appear once
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .orElse(null);
+
+        System.out.println("First non-repeated character: " + result);
     }
 }

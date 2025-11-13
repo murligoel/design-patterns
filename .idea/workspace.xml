@@ -87,9 +87,9 @@
       <recent name="$PROJECT_DIR$/Tomato/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="FlatMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FlatMap" />
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="learning-streams" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.WithoutBuilder" />
         <item itemvalue="Application.simpleBuilder.Main" />
         <item itemvalue="Application.ThreadSafeDoubleLockingSingleton" />
-        <item itemvalue="Application.FlatMap" />
       </list>
     </recent_temporary>
   </component>
