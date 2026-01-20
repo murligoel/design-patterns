@@ -1,6 +1,6 @@
 // USE CASE DIAGRAM
 
-// Member
+// ---------Member----------
 // Search Catlog -> Search By book title, author name, subject name, publication date
 // cancel Membership
 // Register / Update Account
@@ -12,14 +12,14 @@
 // View Account
 // Return Book -> Pay fine
 
-// Librarian
+// -------Librarian---------
 // All works of member
 // Add Book > Add Book Item  > Update Catalog
 // Remove Book----> Remove book Item-----|
 // Edit Book -> Edit book Item-----------|
 // Issue Book
  
-// Notification 
+// -------Notification------ 
 // Send Overdue notification
 // Send reservation available notification
 // Send reservation cancelled notification
