@@ -43,7 +43,7 @@ class Address {
 class CinemaHall {
     String name;
     int totalSeats;
-    List<CinemaHallSeat> CinemaHallSeats;
+    List<CinemaHallSeat> cinemaHallSeats;
     List<Show> shows;
 }
 
