@@ -72,7 +72,6 @@ class Movie {
     Date releaseDate;
     String county;
     String genre;
-    List<Show> shows;
 }
 
 // -----Actors-------
